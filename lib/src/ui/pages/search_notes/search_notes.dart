@@ -1,12 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:notes_app/domain/hive/hive_box.dart';
-import 'package:notes_app/domain/hive/notes_data.dart';
-import 'package:notes_app/generated/locale_keys.g.dart';
-import 'package:notes_app/ui/components/card_widget.dart';
-import 'package:notes_app/ui/theme/app_colors.dart';
-import 'package:notes_app/ui/theme/app_style.dart';
+import 'package:notes_app/src/exports.dart';
+
 
 class SearchNotes extends StatefulWidget {
   const SearchNotes({super.key});

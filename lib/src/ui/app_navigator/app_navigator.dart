@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:notes_app/ui/app_navigator/app_routes.dart';
-import 'package:notes_app/ui/pages/add_notes_page/add_notes_page.dart';
-import 'package:notes_app/ui/pages/change_notes/change_notes.dart';
-import 'package:notes_app/ui/pages/error_page/error_page.dart';
-import 'package:notes_app/ui/pages/home_page/home_page.dart';
-import 'package:notes_app/ui/pages/search_notes/search_notes.dart';
+import 'package:notes_app/src/exports.dart';
+
 
 class AppNavigator {
   static String initRoute = AppRoutes.home;

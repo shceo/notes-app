@@ -1,9 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:notes_app/domain/hive/notes_data.dart';
-import 'package:notes_app/generated/codegen_loader.g.dart';
-import 'package:notes_app/notes_app.dart';
+import 'package:notes_app/src/exports.dart';
+
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

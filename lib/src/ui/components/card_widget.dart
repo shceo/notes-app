@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notes_app/ui/theme/app_colors.dart';
-import 'package:notes_app/ui/theme/app_style.dart';
+import 'package:notes_app/src/exports.dart';
 
 class CardWidget extends StatelessWidget {
   const CardWidget({

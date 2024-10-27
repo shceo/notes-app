@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notes_app/ui/theme/app_style.dart';
+import 'package:notes_app/src/exports.dart';
 
 class ErrorPage extends StatelessWidget {
   const ErrorPage({super.key});

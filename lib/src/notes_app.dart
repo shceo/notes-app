@@ -1,7 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:notes_app/domain/providers/notes_provider.dart';
-import 'package:notes_app/ui/app_navigator/app_navigator.dart';
+import 'package:notes_app/src/exports.dart';
 import 'package:provider/provider.dart';
 
 class NotesApp extends StatelessWidget {

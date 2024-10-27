@@ -1,7 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:notes_app/domain/hive/hive_box.dart';
-import 'package:notes_app/domain/hive/notes_data.dart';
+import 'package:notes_app/src/exports.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class NotesProvider extends ChangeNotifier {

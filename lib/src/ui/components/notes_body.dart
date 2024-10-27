@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
-import 'package:notes_app/domain/hive/hive_box.dart';
-import 'package:notes_app/domain/hive/notes_data.dart';
-import 'package:notes_app/ui/components/card_widget.dart';
-import 'package:notes_app/ui/components/dialog_window_widget.dart';
+import 'package:notes_app/src/exports.dart';
 
 class NotesBody extends StatelessWidget {
   const NotesBody({super.key});

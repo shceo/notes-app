@@ -1,48 +1,38 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:notes_app/domain/providers/notes_provider.dart';
-import 'package:notes_app/generated/locale_keys.g.dart';
-import 'package:notes_app/ui/components/text_form_field_widget.dart';
-import 'package:notes_app/ui/theme/app_colors.dart';
-import 'package:notes_app/ui/theme/app_style.dart';
+import 'package:notes_app/src/exports.dart';
 import 'package:provider/provider.dart';
 
-class AddNotesPage extends StatelessWidget {
-  const AddNotesPage({super.key});
+class ChangeNotes extends StatelessWidget {
+  const ChangeNotes({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: const Icon(
-            Icons.arrow_back_ios,
-            color: AppColors.blackColor,
-          ),
-        ),
         backgroundColor: AppColors.backgroundColor,
-        title: Text(
-          LocaleKeys.addNotes.tr(),
+        title: const Text(
+          'Изменить заметку',
           style: AppStyle.fontStyle,
         ),
         centerTitle: true,
       ),
-      body: const AddNotesBody(),
+      body: const ChangeNotesBody(),
     );
   }
 }
 
-class AddNotesBody extends StatelessWidget {
-  const AddNotesBody({super.key});
+class ChangeNotesBody extends StatelessWidget {
+  const ChangeNotesBody({super.key});
 
   @override
   Widget build(BuildContext context) {
     final model = context.watch<NotesProvider>();
+    final arg = ModalRoute.of(context)?.settings.arguments;
+    final int index = arg is int ? arg : 0;
+
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+      padding: const EdgeInsets.all(16),
       child: Column(
         children: [
           TextFormFieldWidget(
@@ -58,14 +48,18 @@ class AddNotesBody extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           SizedBox(
-            width: double.infinity,
+            width: MediaQuery.of(context).size.width,
             child: ElevatedButton(
               onPressed: () {
-                model.addNotes();
-                Navigator.pop(context);
+                model.changeNote(context, index);
               },
               child: Text(
-                LocaleKeys.add.tr(),
+                LocaleKeys.change.tr(),
+                style: AppStyle.fontStyle.copyWith(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                  color: AppColors.purpleColor,
+                ),
               ),
             ),
           ),
